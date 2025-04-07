@@ -1,0 +1,21 @@
+@model BusTicket.Models.Entities.Otobus
+
+@{
+    ViewData["Title"] = "Otobüs Detayları"; }
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Otobüs</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Plaka)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Plaka)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.KoltukKapasitesi)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.KoltukKapasitesi)</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.OtobusID" class="btn btn-warning">Düzenle</a> |
+    <a asp-action="Index" class="btn btn-secondary">Listeye Geri Dön</a>
+</div>

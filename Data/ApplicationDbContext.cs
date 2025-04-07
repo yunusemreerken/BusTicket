@@ -1,15 +1,21 @@
-using Microsoft.EntityFrameworkCore;
-using BusTicket.Models.Entities; // Model sınıflarınızın namespace'i
+// using Microsoft.EntityFrameworkCore; // Bu satırı silin veya yorumlayın
+using Microsoft.AspNetCore.Identity; // Bunu ekleyin
+using Microsoft.EntityFrameworkCore; // Bu kalsın
+using BusTicket.Models.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace BusTicket.Data
 {
-    public class ApplicationDbContext : DbContext
+    // DbContext yerine IdentityDbContext'ten miras alıyoruz
+    // Varsayılan IdentityUser sınıfını kullanacağız
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
         {
         }
 
-        // Veritabanı tablolarına karşılık gelen DbSet'ler
+        // Kendi DbSet'leriniz burada kalmaya devam edecek
         public DbSet<Otobus> Otobusler { get; set; }
         public DbSet<Guzergah> Guzergahlar { get; set; }
         public DbSet<Sefer> Seferler { get; set; }
@@ -17,28 +23,27 @@ namespace BusTicket.Data
         public DbSet<Yolcu> Yolcular { get; set; }
         public DbSet<Bilet> Biletler { get; set; }
 
-        // (İsteğe bağlı) Model yapılandırmalarını burada veya ayrı Configuration sınıflarında yapabilirsiniz.
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(builder); // Önce base metodu çağırın (Identity tabloları için önemli)
 
-            // Örnek: Benzersiz PNR numarası sağlamak için Index ekleme
-            modelBuilder.Entity<Bilet>()
+            // Kendi model yapılandırmalarınız burada devam edebilir
+            builder.Entity<Bilet>()
                 .HasIndex(b => b.PNR)
                 .IsUnique();
 
-            // Örnek: Bir seferdeki koltuk numarasının benzersiz olmasını sağlama
-            modelBuilder.Entity<Koltuk>()
+            builder.Entity<Koltuk>()
                 .HasIndex(k => new { k.SeferID, k.KoltukNumarasi })
                 .IsUnique();
 
-            // İlişkileri daha detaylı yapılandırmak isterseniz burada Fluent API kullanabilirsiniz.
-            // Örnek: Sefer ve Bilet arasındaki ilişki (genelde otomatik algılanır ama açıkça belirtilebilir)
-            modelBuilder.Entity<Bilet>()
+            builder.Entity<Bilet>()
                 .HasOne(b => b.Sefer)
                 .WithMany(s => s.Biletler)
                 .HasForeignKey(b => b.SeferID)
-                .OnDelete(DeleteBehavior.Restrict); // Bir sefer silinirse ilişkili biletler ne olacak? (Restrict: Engelle)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Identity tabloları için özel yapılandırmalar gerekiyorsa buraya eklenebilir
+            // Örneğin, tablo isimlerini değiştirmek vb.
         }
     }
 }
