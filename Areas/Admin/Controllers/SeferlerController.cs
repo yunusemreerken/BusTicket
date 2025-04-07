@@ -3,12 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using BusTicket.Data; // DbContext'in bulunduğu namespace
 using BusTicket.Models.Entities; // Modellerin bulunduğu namespace
 using System.Linq; // LINQ sorguları için
-using System.Threading.Tasks; // Asenkron işlemler için
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization; // Asenkron işlemler için
 
 namespace BusTicket.Areas.Admin.Controllers
 {
     [Area("Admin")] // <-- Bu attribute'u ekle
-    // [Authorize(Roles = "Admin")] // <-- GÜVENLİK İÇİN DAHA SONRA EKLEYİN!
+    [Authorize(Roles = "Admin")] // <-- GÜVENLİK İÇİN DAHA SONRA EKLEYİN!
     // [ApiController] ve ControllerBase yerine Controller sınıfından miras alıyoruz
     public class SeferlerController : Controller
     {

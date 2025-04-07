@@ -75,11 +75,11 @@ app.UseAuthorization(); // Yetkilendirme middleware'ini ekle
 
 app.UseEndpoints(endpoints =>
 {
+    // app.UseEndpoints içinde
     endpoints.MapControllerRoute(
         name: "AdminArea",
-        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}",
-        defaults: new { area = "Admin" }
-        );
+        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}" // defaults kısmı kaldırıldı
+    );
 
     endpoints.MapControllerRoute(
         name: "default",
@@ -88,6 +88,8 @@ app.UseEndpoints(endpoints =>
     // Identity UI sayfaları için Razor Pages'i map et (Login, Register vb.)
     endpoints.MapRazorPages(); // <-- Identity UI için bunu ekleyin
 });
+
+
 
 
 // ----- VERİTABANI SEED İŞLEMİ (ADMIN KULLANICISI OLUŞTURMA) -----

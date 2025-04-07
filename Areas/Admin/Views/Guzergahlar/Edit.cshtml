@@ -1,0 +1,35 @@
+@model BusTicket.Models.Entities.Guzergah
+
+@{ ViewData["Title"] = "Güzergah Düzenle"; }
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Otobüs</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @* ID'yi form içinde gizli olarak göndermemiz gerekiyor *@
+            <input type="hidden" asp-for="GuzergahID" />
+            <div class="mb-3">
+                <label asp-for="KalkisSehri" class="form-label"></label>
+                <input asp-for="KalkisSehri" class="form-control" />
+                <span asp-validation-for="KalkisSehri" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="VarisSehri" class="form-label"></label>
+                <input asp-for="VarisSehri" class="form-control" />
+                <span asp-validation-for="VarisSehri" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">İptal</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -36,7 +36,7 @@ namespace BusTicket.Models // Veya projenize uygun başka bir namespace
                 {
                     var newAdminUser = new IdentityUser()
                     {
-                        UserName = "admin", // Kullanıcı adı
+                        UserName = adminUserEmail, // Kullanıcı adı
                         Email = adminUserEmail,
                         EmailConfirmed = true // E-posta doğrulaması gerektirmiyorsanız true yapın
                         // Diğer IdentityUser özelliklerini de ayarlayabilirsiniz (PhoneNumber vb.)

@@ -1,0 +1,24 @@
+@model BusTicket.Models.Entities.Guzergah
+
+@{ ViewData["Title"] = "Güzergah Sil"; }
+
+<h1>@ViewData["Title"]</h1>
+
+<h3 class="text-danger">Bu güzergahı silmek istediğinizden emin misiniz?</h3>
+@* Silme sırasında Controller'dan gelen bir hata varsa göster *@
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div>
+    <h4>Otobüs</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.KalkisSehri)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.VarisSehri)</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        @* Silinecek öğenin ID'sini gizli olarak gönder *@
+        <input type="hidden" asp-for="GuzergahID" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">İptal</a>
+    </form>
+</div>

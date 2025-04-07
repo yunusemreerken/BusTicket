@@ -23,25 +23,15 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="Admin" asp-controller="Otobusler" asp-action="Index">Otobüs Yönetimi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="Admin" asp-controller="Guzergahlar" asp-action="Index">Güzergah Yönetimi</a>
                     </li>
-                    @* Eğer kullanıcı Admin ise Admin paneli linklerini göster *@
-                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Otobusler" asp-action="Index">Otobüs Yönetimi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Guzergahlar" asp-action="Index">Güzergah Yönetimi</a>
-                        </li>
-                        @* Diğer admin linkleri buraya eklenebilir *@
-                    }
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Seferler" asp-action="Index">Sefer Yönetimi</a>
+                    </li>
+                    
                 </ul>
                 @* ----- LOGIN/LOGOUT KISMI ----- *@
                 <partial name="_LoginPartial" />
