@@ -6,19 +6,19 @@ namespace BusTicket.Models.Entities
     public class Seat
     {
         [Key]
-        public int KoltukID { get; set; }
+        public int SeatId { get; set; }
 
         [Required]
-        public int SeferID { get; set; } // Foreign Key
+        public int VoyageId { get; set; } // Foreign Key
 
         [Required]
-        public int KoltukNumarasi { get; set; }
+        public int SeatNumber { get; set; }
 
         [Required]
-        public bool DoluMu { get; set; } = false; // Başlangıçta boş
+        public bool Full { get; set; } = false; // Başlangıçta boş
 
         // Navigation Property
-        [ForeignKey("SeferID")]
-        public virtual Voyage? Sefer { get; set; }
+        [ForeignKey("VoyageId")]
+        public virtual Voyage? Voyage { get; set; }
     }
 }

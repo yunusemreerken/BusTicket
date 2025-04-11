@@ -6,33 +6,33 @@ namespace BusTicket.Models.Entities
     public class Voyage
     {
         [Key]
-        public int SeferID { get; set; }
+        public int VoyageId { get; set; }
 
         [Required]
-        public int GuzergahID { get; set; } // Foreign Key
+        public int RouteId { get; set; } // Foreign Key
 
         [Required]
-        public int OtobusID { get; set; } // Foreign Key
+        public int BusId { get; set; } // Foreign Key
 
         [Required(ErrorMessage = "Kalkış zamanı boş bırakılamaz.")]
-        public DateTime KalkisZamani { get; set; }
+        public DateTime TakeOff { get; set; }
 
         [Required(ErrorMessage = "Varış zamanı boş bırakılamaz.")]
-        public DateTime VarisZamani { get; set; }
+        public DateTime Arrival { get; set; }
 
         [Required(ErrorMessage = "Bilet fiyatı boş bırakılamaz.")]
         [Column(TypeName = "decimal(18,2)")] // Veritabanında para birimi için uygun tip
         [Range(1, 10000, ErrorMessage = "Fiyat 1 ile 10000 arasında olmalıdır.")]
-        public decimal BiletFiyati { get; set; }
+        public decimal TicketPrice { get; set; }
 
         // Navigation Properties
-        [ForeignKey("GuzergahID")]
-        public virtual Guzergah? Guzergah { get; set; } // ? ile nullable yapıldı
+        [ForeignKey("CourseId")]
+        public virtual Course? Course { get; set; } // ? ile nullable yapıldı
 
-        [ForeignKey("OtobusID")]
-        public virtual Otobus? Otobus { get; set; } // ? ile nullable yapıldı
+        [ForeignKey("BusId")]
+        public virtual Bus? Bus { get; set; } // ? ile nullable yapıldı
 
-        public virtual ICollection<Koltuk> Koltuklar { get; set; } = new List<Koltuk>();
-        public virtual ICollection<Ticket> Biletler { get; set; } = new List<Ticket>();
+        public virtual ICollection<Seat> Seats { get; set; } = new List<Seat>();
+        public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
     }
 }

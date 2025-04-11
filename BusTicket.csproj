@@ -25,6 +25,7 @@
 
     <ItemGroup>
       <Folder Include="Areas\Admin\Models\" />
+      <Folder Include="Migrations\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -34,6 +35,17 @@
       <_ContentIncludedByDefault Remove="Views\Otobusler\Edit.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Otobusler\Index.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Seferler\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Guzergahlar\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Guzergahlar\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Guzergahlar\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Guzergahlar\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Guzergahlar\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Otobusler\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Otobusler\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Otobusler\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Otobusler\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Otobusler\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Seferler\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
@@ -46,7 +58,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Areas\Admin\Views\Shared\Error.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml" />
     </ItemGroup>

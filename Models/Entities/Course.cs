@@ -5,7 +5,7 @@ namespace BusTicket.Models.Entities
     public class Course
     {
         [Key]
-        public int RouteId { get; set; }
+        public int CourseId { get; set; }
 
         [Required(ErrorMessage = "Kalkış şehri boş bırakılamaz.")] [StringLength(50)]
         public string TakeOffCity { get; set; } = string.Empty;
