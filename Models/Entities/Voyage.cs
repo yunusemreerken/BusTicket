@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BusTicket.Models.Entities
 {
-    public class Sefer
+    public class Voyage
     {
         [Key]
         public int SeferID { get; set; }
@@ -33,6 +33,6 @@ namespace BusTicket.Models.Entities
         public virtual Otobus? Otobus { get; set; } // ? ile nullable yapıldı
 
         public virtual ICollection<Koltuk> Koltuklar { get; set; } = new List<Koltuk>();
-        public virtual ICollection<Bilet> Biletler { get; set; } = new List<Bilet>();
+        public virtual ICollection<Ticket> Biletler { get; set; } = new List<Ticket>();
     }
 }

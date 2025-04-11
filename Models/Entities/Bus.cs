@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BusTicket.Models.Entities
 {
-    public class Otobus
+    public class Bus
     {
         [Key] // Primary Key
         public int OtobusID { get; set; }
@@ -16,6 +16,6 @@ namespace BusTicket.Models.Entities
         public int KoltukKapasitesi { get; set; }
 
         // İlişkili Seferler (Navigation Property)
-        public virtual ICollection<Sefer> Seferler { get; set; } = new List<Sefer>();
+        public virtual ICollection<Voyage> Seferler { get; set; } = new List<Voyage>();
     }
 }

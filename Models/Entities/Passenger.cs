@@ -25,6 +25,6 @@ namespace BusTicket.Models.Entities
         public string? Telefon { get; set; } // Opsiyonel olabilir
 
         // İlişkili Biletler
-        public virtual ICollection<Bilet> Biletler { get; set; } = new List<Bilet>();
+        public virtual ICollection<Ticket> Biletler { get; set; } = new List<Ticket>();
     }
 }

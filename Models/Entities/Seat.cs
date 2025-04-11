@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BusTicket.Models.Entities
 {
-    public class Koltuk
+    public class Seat
     {
         [Key]
         public int KoltukID { get; set; }
@@ -19,6 +19,6 @@ namespace BusTicket.Models.Entities
 
         // Navigation Property
         [ForeignKey("SeferID")]
-        public virtual Sefer? Sefer { get; set; }
+        public virtual Voyage? Sefer { get; set; }
     }
 }
