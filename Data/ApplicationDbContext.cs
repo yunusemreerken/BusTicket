@@ -16,34 +16,18 @@ namespace BusTicket.Data
         }
 
         // Kendi DbSet'leriniz burada kalmaya devam edecek
-        public DbSet<Bus> Buses { get; set; }
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Voyage> Voyages { get; set; }
-        public DbSet<Seat> Seats { get; set; }
-        public DbSet<Passenger> Passengers { get; set; }
-        public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<BusRoute> BusRoutes { get; set; }
+        public DbSet<BusSchedule> BusSchedules { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder); // Önce base metodu çağırın (Identity tabloları için önemli)
-
+            base.OnModelCreating(modelBuilder); // Önce base metodu çağırın (Identity tabloları için önemli)
+           
+            modelBuilder.Entity<BusSchedule>()
+                .HasOne(s => s.Route)
+                .WithMany(r => r.Schedules)
+                .HasForeignKey(s => s.BusRouteId);
             // Kendi model yapılandırmalarınız burada devam edebilir
-            builder.Entity<Ticket>()
-                .HasIndex(b => b.PNR)
-                .IsUnique();
-
-            builder.Entity<Seat>()
-                .HasIndex(s => new { s.VoyageId, s.SeatNumber })
-                .IsUnique();
-
-            builder.Entity<Ticket>()
-                .HasOne(b => b.Voyage)
-                .WithMany(s => s.Tickets)
-                .HasForeignKey(b => b.VoyageId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            // Identity tabloları için özel yapılandırmalar gerekiyorsa buraya eklenebilir
-            // Örneğin, tablo isimlerini değiştirmek vb.
         }
     }
 }

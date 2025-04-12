@@ -4,6 +4,7 @@ using BusTicket.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BusTicket.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250411173511_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,55 +25,177 @@ namespace BusTicket.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("BusTicket.Models.Entities.BusRoute", b =>
+            modelBuilder.Entity("BusTicket.Models.Entities.Bus", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("BusId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BusId"));
+
+                    b.Property<string>("Plate")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<int>("SeatCapacity")
+                        .HasColumnType("int");
+
+                    b.HasKey("BusId");
+
+                    b.ToTable("Buses");
+                });
+
+            modelBuilder.Entity("BusTicket.Models.Entities.BusRoute", b =>
+                {
+                    b.Property<int>("BusRouteId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BusRouteId"));
 
                     b.Property<string>("Destination")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Origin")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("Id");
+                    b.HasKey("BusRouteId");
 
                     b.ToTable("BusRoutes");
                 });
 
-            modelBuilder.Entity("BusTicket.Models.Entities.BusSchedule", b =>
+            modelBuilder.Entity("BusTicket.Models.Entities.Passenger", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PassengerId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PassengerId"));
 
-                    b.Property<DateTime>("ArrivalTime")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("AvailableSeats")
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Phone")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("PassengerId");
+
+                    b.ToTable("Passengers");
+                });
+
+            modelBuilder.Entity("BusTicket.Models.Entities.Seat", b =>
+                {
+                    b.Property<int>("SeatId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("BusRouteId")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SeatId"));
+
+                    b.Property<bool>("Full")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("SeatNumber")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DepartureTime")
+                    b.Property<int>("VoyageId")
+                        .HasColumnType("int");
+
+                    b.HasKey("SeatId");
+
+                    b.HasIndex("VoyageId", "SeatNumber")
+                        .IsUnique();
+
+                    b.ToTable("Seats");
+                });
+
+            modelBuilder.Entity("BusTicket.Models.Entities.Ticket", b =>
+                {
+                    b.Property<int>("TicketId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TicketId"));
+
+                    b.Property<DateTime>("BuyDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Price")
+                    b.Property<string>("PNR")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("PassengerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SeatNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VoyageId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TicketId");
+
+                    b.HasIndex("PNR")
+                        .IsUnique();
+
+                    b.HasIndex("PassengerId");
+
+                    b.HasIndex("VoyageId");
+
+                    b.ToTable("Tickets");
+                });
+
+            modelBuilder.Entity("BusTicket.Models.Entities.Voyage", b =>
+                {
+                    b.Property<int>("VoyageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VoyageId"));
+
+                    b.Property<DateTime>("Arrival")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("BusId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RouteId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TakeOff")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("TicketPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("Id");
+                    b.HasKey("VoyageId");
 
-                    b.HasIndex("BusRouteId");
+                    b.HasIndex("BusId");
 
-                    b.ToTable("BusSchedules");
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("Voyages");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -275,15 +400,51 @@ namespace BusTicket.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("BusTicket.Models.Entities.BusSchedule", b =>
+            modelBuilder.Entity("BusTicket.Models.Entities.Seat", b =>
                 {
-                    b.HasOne("BusTicket.Models.Entities.BusRoute", "Route")
-                        .WithMany("Schedules")
-                        .HasForeignKey("BusRouteId")
+                    b.HasOne("BusTicket.Models.Entities.Voyage", "Voyage")
+                        .WithMany("Seats")
+                        .HasForeignKey("VoyageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Route");
+                    b.Navigation("Voyage");
+                });
+
+            modelBuilder.Entity("BusTicket.Models.Entities.Ticket", b =>
+                {
+                    b.HasOne("BusTicket.Models.Entities.Passenger", "Passenger")
+                        .WithMany("Tickets")
+                        .HasForeignKey("PassengerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BusTicket.Models.Entities.Voyage", "Voyage")
+                        .WithMany("Tickets")
+                        .HasForeignKey("VoyageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Passenger");
+
+                    b.Navigation("Voyage");
+                });
+
+            modelBuilder.Entity("BusTicket.Models.Entities.Voyage", b =>
+                {
+                    b.HasOne("BusTicket.Models.Entities.Bus", "Bus")
+                        .WithMany("Voyages")
+                        .HasForeignKey("BusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BusTicket.Models.Entities.BusRoute", "Course")
+                        .WithMany("Voyage")
+                        .HasForeignKey("CourseId");
+
+                    b.Navigation("Bus");
+
+                    b.Navigation("Course");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -337,9 +498,26 @@ namespace BusTicket.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("BusTicket.Models.Entities.Bus", b =>
+                {
+                    b.Navigation("Voyages");
+                });
+
             modelBuilder.Entity("BusTicket.Models.Entities.BusRoute", b =>
                 {
-                    b.Navigation("Schedules");
+                    b.Navigation("Voyage");
+                });
+
+            modelBuilder.Entity("BusTicket.Models.Entities.Passenger", b =>
+                {
+                    b.Navigation("Tickets");
+                });
+
+            modelBuilder.Entity("BusTicket.Models.Entities.Voyage", b =>
+                {
+                    b.Navigation("Seats");
+
+                    b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
         }

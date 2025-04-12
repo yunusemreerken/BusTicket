@@ -1,4 +1,4 @@
-using BusTicket.ViewModels;
+using BusTicket.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 

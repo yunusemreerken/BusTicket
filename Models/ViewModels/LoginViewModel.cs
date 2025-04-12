@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BusTicket.ViewModels
+namespace BusTicket.Models.ViewModels
 {
     public class LoginViewModel
     {
