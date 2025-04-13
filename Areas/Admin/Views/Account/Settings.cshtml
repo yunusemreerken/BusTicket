@@ -1,0 +1,40 @@
+@model BusTicket.Areas.Admin.Models.ViewModels.SettingsViewModel
+@{
+    ViewData["Title"] = "Ayarlar";
+}
+
+<h4>@ViewData["Title"]</h4>
+
+@if (!string.IsNullOrEmpty(Model.StatusMessage))
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @Model.StatusMessage
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <p>Burada uygulama veya kullanıcı ayarları için form elemanları yer alabilir.</p>
+        @*<form method="post">
+             @Html.AntiForgeryToken()
+             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+             <div class="form-check mb-3">
+                  <input asp-for="EnableNotifications" type="checkbox" class="form-check-input" />
+                  <label asp-for="EnableNotifications" class="form-check-label"></label>
+             </div>
+
+             <button type="submit" class="btn btn-primary">Ayarları Kaydet</button>
+         </form>*@
+
+        <hr />
+        @* Parola Değiştirme, 2FA gibi linkler veya formlar buraya eklenebilir *@
+        @* <a asp-action="ChangePassword">Parolamı Değiştir</a> *@
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

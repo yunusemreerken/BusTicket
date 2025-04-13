@@ -1,0 +1,116 @@
+
+@{
+    ViewData["Title"] = "Dashboard"; // Bu sayfaya özgü başlık
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Today Sale</p>
+                    <h6 class="mb-0">$1234</h6> @* Buraya dinamik veri gelecek *@
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Total Sale</p>
+                    <h6 class="mb-0">$1234</h6> @* Buraya dinamik veri gelecek *@
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-area fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Today Revenue</p>
+                    <h6 class="mb-0">$1234</h6> @* Buraya dinamik veri gelecek *@
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Total Revenue</p>
+                    <h6 class="mb-0">$1234</h6> @* Buraya dinamik veri gelecek *@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-light text-center rounded p-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="mb-0">Worldwide Sales</h6>
+                    <a href="">Show All</a>
+                </div>
+                <canvas id="worldwide-sales"></canvas>
+            </div>
+        </div>
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-light text-center rounded p-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="mb-0">Salse & Revenue</h6>
+                    <a href="">Show All</a>
+                </div>
+                <canvas id="salse-revenue"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+@* ... Diğer Recent Sales ve Widgets bölümleri buraya eklenebilir ... *@
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} @* Form validasyonu için (varsa) *@
+
+    @* Bu sayfaya özgü JavaScript kodları veya chart başlatma kodları *@
+    <script>
+        // Örnek: Chart.js başlatma kodları buraya gelebilir
+         // Worldwide Sales Chart
+        var ctx1 = $("#worldwide-sales").get(0).getContext("2d");
+        var myChart1 = new Chart(ctx1, {
+            type: "bar",
+            data: {
+                labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"], // Dinamik etiketler
+                datasets: [{
+                        label: "USA",
+                        data: [15, 30, 55, 65, 60, 80, 95], // Dinamik veri
+                        backgroundColor: "rgba(0, 156, 255, .7)"
+                    },
+                    {
+                        label: "UK",
+                        data: [8, 35, 40, 60, 70, 55, 75], // Dinamik veri
+                        backgroundColor: "rgba(0, 156, 255, .5)"
+                    },
+                    {
+                        label: "AU",
+                        data: [12, 25, 45, 55, 65, 70, 60], // Dinamik veri
+                        backgroundColor: "rgba(0, 156, 255, .3)"
+                    }
+                ]
+                },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Salse & Revenue Chart - Benzer şekilde buraya eklenir...
+        var ctx2 = $("#salse-revenue").get(0).getContext("2d");
+        // ... Chart.js kodu ...
+
+        // Calendar ve ToDo listesi için gerekli JS kodları da buraya eklenebilir.
+        // $('#calender').datetimepicker({
+        //     inline: true,
+        //     format: 'L'
+        // });
+
+    </script>
+}

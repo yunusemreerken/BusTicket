@@ -78,7 +78,7 @@ app.UseEndpoints(endpoints =>
     // app.UseEndpoints içinde
     endpoints.MapControllerRoute(
         name: "AdminArea",
-        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}" // defaults kısmı kaldırıldı
+        pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}" // defaults kısmı kaldırıldı
     );
 
     endpoints.MapControllerRoute(

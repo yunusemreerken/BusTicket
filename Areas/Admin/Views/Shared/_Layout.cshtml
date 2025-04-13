@@ -1,59 +1,139 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<html lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - BusTicket</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/BusTicket.styles.css" asp-append-version="true"/>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"] - DASHMIN</title> @* Dinamik başlık *@
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="~/img/favicon.ico" rel="icon"> @* wwwroot'tan yol *@
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" asp-append-version="true"> @* wwwroot'tan yol *@
+    <link href="~/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" asp-append-version="true" /> @* wwwroot'tan yol *@
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true"> @* wwwroot'tan yol *@
+
+    <link href="~/css/style.css" rel="stylesheet" asp-append-version="true"> @* wwwroot'tan yol *@
+
+    @* Sayfaya özgü CSS eklemek için (opsiyonel) *@
+    @await RenderSectionAsync("Styles", required: false)
 </head>
+
 <body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BusTicket</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Otobusler" asp-action="Index">Otobüs Yönetimi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Guzergahlar" asp-action="Index">Güzergah Yönetimi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Seferler" asp-action="Index">Sefer Yönetimi</a>
-                    </li>
-                    
-                </ul>
-                @* ----- LOGIN/LOGOUT KISMI ----- *@
-                <partial name="_LoginPartial" />
-                @* ----- LOGIN/LOGOUT KISMI BİTTİ ----- *@
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
-    </nav>
-</header>
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
+        <div class="sidebar pe-4 pb-3">
 
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2025 - BusTicket - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <partial name="_Header" />
+
+
+
+
+
+        </div>
+        <div class="content">
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Search"> @* Arama formu için Controller/Action ekleyebilirsiniz *@
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-envelope me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Message</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            @* Mesajları dinamik olarak listeleyebilirsiniz *@
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="~/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            @* Diğer mesajlar... *@
+                            <a href="#" class="dropdown-item text-center">See all message</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notification</span> @* Bildirim sayısını gösterebilirsiniz *@
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            @* Bildirimleri dinamik olarak listeleyebilirsiniz *@
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Profile updated</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                           @* Diğer bildirimler... *@
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="~/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">John Doe</span> @* Giriş yapan kullanıcı adı *@
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a asp-controller="Account" asp-action="Profile" class="dropdown-item">My Profile</a>
+                            <a asp-controller="Account" asp-action="Settings" class="dropdown-item">Settings</a>
+                            <form id="logoutForm" class="form-inline" asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                                @Html.AntiForgeryToken() @* CSRF Token *@
+                                <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0 dropdown-item">Log Out</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            @* -------- ANA İÇERİK ALANI -------- *@
+            @* Buraya View'ların içeriği gelecek *@
+            @RenderBody()
+            @* -------- ANA İÇERİK ALANI SONU -------- *@
+
+            <partial name="_Footer" />
+
+        </div>
+            
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-</footer>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/chart/chart.min.js" asp-append-version="true"></script> @* wwwroot'tan yol *@
+    <script src="~/lib/easing/easing.min.js" asp-append-version="true"></script> @* wwwroot'tan yol *@
+    <script src="~/lib/waypoints/waypoints.min.js" asp-append-version="true"></script> @* wwwroot'tan yol *@
+    <script src="~/lib/owlcarousel/owl.carousel.min.js" asp-append-version="true"></script> @* wwwroot'tan yol *@
+    <script src="~/lib/tempusdominus/js/moment.min.js" asp-append-version="true"></script> @* wwwroot'tan yol *@
+    <script src="~/lib/tempusdominus/js/moment-timezone.min.js" asp-append-version="true"></script> @* wwwroot'tan yol *@
+    <script src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" asp-append-version="true"></script> @* wwwroot'tan yol *@
+
+    <script src="~/js/main.js" asp-append-version="true"></script> @* wwwroot'tan yol *@
+
+    @* Sayfaya özgü script'leri ve başlatma kodlarını eklemek için *@
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
