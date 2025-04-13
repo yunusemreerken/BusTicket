@@ -1,57 +1,161 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - BusTicket</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-</head>
-<body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BusTicket</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Filo">Filo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="BusSearch" asp-action="Index">Search</a>
-                    </li>
-                    
-                </ul>
-                @* ----- LOGIN/LOGOUT KISMI ----- *@
-                <partial name="_LoginPartial" />
-                @* ----- LOGIN/LOGOUT KISMI BİTTİ ----- *@
-                
+﻿
+
+
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en"> 
+  <head>
+    <!-- Site Title-->
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="~/home/images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald:200,400%7CLato:300,400,300italic,700%7CMontserrat:900">
+    <link rel="stylesheet" href="~/home/css/bootstrap.css">
+    <link rel="stylesheet" href="~/home/css/style.css">
+    <link rel="stylesheet" href="~/home/css/fonts.css">
+    @await RenderSectionAsync("ScriptsHead", required: false)
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="~/home/images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <![endif]--> 
+  </head>
+  <body>
+    <!-- Page preloader-->
+    <div class="page-loader"> 
+      <div class="page-loader-body"> 
+        <div class="preloader-wrapper big active"> 
+          <div class="spinner-layer spinner-blue"> 
+            <div class="circle-clipper left">
+              <div class="circle"> </div>
             </div>
+            <div class="gap-patch">
+              <div class="circle"> </div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"> </div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="spinner-layer spinner-yellow"> 
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"> </div>
+            </div>
+          </div>
+          <div class="spinner-layer spinner-green"> 
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
         </div>
-    </nav>
-</header>
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
-
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2025 - BusTicket -
-
+      </div>
     </div>
-</footer>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
-</body>
+    <!-- Page-->
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap rd-navbar-corporate">
+          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth" data-xl-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-md-stick-up-offset="130px" data-lg-stick-up-offset="100px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-top-panel rd-navbar-collapse novi-background">
+              <div class="rd-navbar-top-panel-inner">
+                <ul class="list-inline">
+                  <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-phone"></span>
+                    <ul class="list-comma">
+                      <li><a href="tel:#">1-800-1234-567</a></li>
+                      <li><a href="tel:#">1-800-6780-345</a></li>
+                    </ul>
+                  </li>
+                  <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">2130 Fulton Street, San Diego, CA 94117-1080 USA</a></li>
+                  <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-email"></span><a href="mailto:#">mail@demolink.org</a></li>
+                </ul>
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook" href="#"></a></li>
+                  <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter" href="#"></a></li>
+                  <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-instagram" href="#"></a></li>
+                  <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-google-plus" href="#"></a></li>
+                  <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-linkedin" href="#"></a></li>
+                </ul>
+              </div>
+              <div class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary button-nina" href="https://www.templatemonster.com/website-templates/62466.html" target="_blank">buy template now</a></div>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" asp-area="" asp-action="Index" asp-controller="Home"><img class="logo-default" src="~/home/images/logo-default-208x46.png" alt="" width="208" height="46"/><img class="logo-inverse" src="images/logo-inverse-208x46.png" alt="" width="208" height="46"/></a></div>
+              </div>
+              <div class="rd-navbar-aside-center">
+                <div class="rd-navbar-nav-wrap">
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    <li class="active"><a asp-area="" asp-action="Index" asp-controller="Home">Home</a>
+                    </li>
+                    <li><a asp-area="" asp-action="About" asp-controller="Home">About Us</a>
+                    </li>
+                    <li><a asp-area="" asp-action="Contacts" asp-controller="Home">Contacts</a>
+                    </li>
+                    <li><a asp-area="" asp-action="Typography" asp-controller="Home">Typography</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="#">Book a tour now</a></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      @RenderBody()
+      <!-- Footer Minimal-->
+      <footer class="section page-footer page-footer-minimal novi-background bg-cover text-center bg-gray-darker">
+        <div class="container container-wide">
+          <div class="row row-fix justify-content-sm-center align-items-md-center row-30">
+            <div class="col-md-10 col-lg-7 col-xl-4 text-xl-left"><a href="index.html"><img class="inverse-logo" src="images/logo-inverse-208x46.png" alt="" width="208" height="46"/></a></div>
+            <div class="col-md-10 col-lg-7 col-xl-4">
+              <p class="right">&#169;&nbsp;<span class="copyright-year"></span> All Rights Reserved. Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">TemplateMonster</a></p>
+            </div>
+            <div class="col-md-10 col-lg-7 col-xl-4 text-xl-right">
+              <ul class="group-xs group-middle">
+                <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-facebook" href="#"></a></li>
+                <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-twitter" href="#"></a></li>
+                <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="#"></a></li>
+                <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-google" href="#"></a></li>
+                <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-linkedin" href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- coded by barber-->
+    @await RenderSectionAsync("Scripts", required: false)
+
+  </body>
 </html>
