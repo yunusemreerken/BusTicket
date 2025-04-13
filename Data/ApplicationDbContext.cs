@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity; // Bunu ekleyin
 using Microsoft.EntityFrameworkCore; // Bu kalsın
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
-namespace BusTicket.Data
+namespace BusTicket.Models.Entities
 {
     // DbContext yerine IdentityDbContext'ten miras alıyoruz
     // Varsayılan IdentityUser sınıfını kullanacağız
@@ -28,17 +28,18 @@ namespace BusTicket.Data
             base.OnModelCreating(modelBuilder); // Önce base metodu çağırın (Identity tabloları için önemli)
 
 
-            modelBuilder.Entity <BusRoute>()
+            // Örnek: İlişki yapılandırması
+            modelBuilder.Entity<BusRoute>() // <<<--- "BusRoute" mu?
                 .HasOne(r => r.OriginCity)
                 .WithMany(c => c.OriginRoutes)
                 .HasForeignKey(r => r.OriginCityId)
-                .OnDelete(DeleteBehavior.Restrict); // Veya .NoAction
+                .OnDelete(DeleteBehavior.Restrict); 
 
-            modelBuilder.Entity<BusRoute>()
+            modelBuilder.Entity<BusRoute>() // <<<--- "BusRoute" mu?
                 .HasOne(r => r.DestinationCity)
                 .WithMany(c => c.DestinationRoutes)
                 .HasForeignKey(r => r.DestinationCityId)
-                .OnDelete(DeleteBehavior.Restrict); // Veya .NoAction
+                .OnDelete(DeleteBehavior.Restrict); 
 
             // Otobüs Plakasının benzersiz (unique) olmasını sağlama
             modelBuilder.Entity<Bus>()

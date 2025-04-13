@@ -1,5 +1,5 @@
+using BusTicket.Models.Entities;
 using Microsoft.AspNetCore.Identity;
-using BusTicket.Data;
 
 namespace BusTicket.Models // Veya projenize uygun başka bir namespace
 {

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity; // Ekleyin
 using Microsoft.EntityFrameworkCore;
-using BusTicket.Data;
 using BusTicket.Models;
+using BusTicket.Models.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 

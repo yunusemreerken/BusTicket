@@ -25,8 +25,8 @@ public class Trip
     public decimal Price { get; set; } // Bilet Fiyatı
 
     // Navigation Properties
-    [ForeignKey("RouteId")]
-    public virtual Route Route { get; set; }
+    [ForeignKey("BusRouteId")]
+    public virtual BusRoute BusRoute { get; set; }
 
     [ForeignKey("BusId")]
     public virtual Bus Bus { get; set; }
