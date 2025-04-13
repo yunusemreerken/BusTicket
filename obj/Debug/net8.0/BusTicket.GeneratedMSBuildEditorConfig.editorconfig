@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWNjb3VudC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/yunusemre/Desktop/web/BusTicket/BusTicket/Areas/Admin/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWNjb3VudC9Qcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/yunusemre/Desktop/web/BusTicket/BusTicket/Areas/Admin/Views/Account/Settings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWNjb3VudC9TZXR0aW5ncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,10 +68,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/yunusemre/Desktop/web/BusTicket/BusTicket/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/yunusemre/Desktop/web/BusTicket/BusTicket/Views/BusSearch/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnVzU2VhcmNoL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/yunusemre/Desktop/web/BusTicket/BusTicket/Views/Home/Filo.cshtml]

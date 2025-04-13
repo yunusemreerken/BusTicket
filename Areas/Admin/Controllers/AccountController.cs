@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BusTicket.Areas.Admin.Controllers
 {
+    [Area("Admin")] // <<<--- BU ÇOK ÖNEMLİ!
+
     public class AccountController : Controller
     {
         private readonly SignInManager<IdentityUser> _signInManager;
