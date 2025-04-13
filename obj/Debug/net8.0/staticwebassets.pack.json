@@ -13,6 +13,510 @@
       "PackagePath": "staticwebassets/css/style.css"
     },
     {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/ReCaptcha.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/ReCaptcha.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/RequestMethod.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/RequestMethod.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/RequestMethod/Curl.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/RequestMethod/Curl.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/RequestMethod/CurlPost.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/RequestMethod/CurlPost.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/RequestMethod/Post.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/RequestMethod/Post.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/RequestMethod/Socket.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/RequestMethod/Socket.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/RequestMethod/SocketPost.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/RequestMethod/SocketPost.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/RequestParameters.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/RequestParameters.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/Response.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/Response.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/ReCaptcha/autoload.php",
+      "PackagePath": "staticwebassets/home/bat/ReCaptcha/autoload.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/phpmailer/PHPMailerAutoload.php",
+      "PackagePath": "staticwebassets/home/bat/phpmailer/PHPMailerAutoload.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/phpmailer/class.phpmailer.php",
+      "PackagePath": "staticwebassets/home/bat/phpmailer/class.phpmailer.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/phpmailer/class.pop3.php",
+      "PackagePath": "staticwebassets/home/bat/phpmailer/class.pop3.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/phpmailer/class.smtp.php",
+      "PackagePath": "staticwebassets/home/bat/phpmailer/class.smtp.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/rd-mailform.config.json",
+      "PackagePath": "staticwebassets/home/bat/rd-mailform.config.json"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/rd-mailform.php",
+      "PackagePath": "staticwebassets/home/bat/rd-mailform.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/rd-mailform.tpl",
+      "PackagePath": "staticwebassets/home/bat/rd-mailform.tpl"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/rd-search.php",
+      "PackagePath": "staticwebassets/home/bat/rd-search.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/reCaptcha.php",
+      "PackagePath": "staticwebassets/home/bat/reCaptcha.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/twitter_api/config.php",
+      "PackagePath": "staticwebassets/home/bat/twitter_api/config.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/twitter_api/tweet.php",
+      "PackagePath": "staticwebassets/home/bat/twitter_api/tweet.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/twitter_api/twitteroauth/OAuth.php",
+      "PackagePath": "staticwebassets/home/bat/twitter_api/twitteroauth/OAuth.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/bat/twitter_api/twitteroauth/twitteroauth.php",
+      "PackagePath": "staticwebassets/home/bat/twitter_api/twitteroauth/twitteroauth.php"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/css/bootstrap.css",
+      "PackagePath": "staticwebassets/home/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/css/fonts.css",
+      "PackagePath": "staticwebassets/home/css/fonts.css"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/css/style.css",
+      "PackagePath": "staticwebassets/home/css/style.css"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/FontAwesome.otf",
+      "PackagePath": "staticwebassets/home/fonts/FontAwesome.otf"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/bootstrap/glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets/home/fonts/bootstrap/glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/bootstrap/glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets/home/fonts/bootstrap/glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets/home/fonts/bootstrap/glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/bootstrap/glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets/home/fonts/bootstrap/glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/bootstrap/glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets/home/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fl-bigmug-line.eot",
+      "PackagePath": "staticwebassets/home/fonts/fl-bigmug-line.eot"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fl-bigmug-line.svg",
+      "PackagePath": "staticwebassets/home/fonts/fl-bigmug-line.svg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fl-bigmug-line.svg___jb_tmp___",
+      "PackagePath": "staticwebassets/home/fonts/fl-bigmug-line.svg___jb_tmp___"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fl-bigmug-line.ttf",
+      "PackagePath": "staticwebassets/home/fonts/fl-bigmug-line.ttf"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fl-bigmug-line.woff",
+      "PackagePath": "staticwebassets/home/fonts/fl-bigmug-line.woff"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets/home/fonts/fontawesome-webfont.eot"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets/home/fonts/fontawesome-webfont.svg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets/home/fonts/fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets/home/fonts/fontawesome-webfont.woff"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets/home/fonts/fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/lg.eot",
+      "PackagePath": "staticwebassets/home/fonts/lg.eot"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/lg.svg",
+      "PackagePath": "staticwebassets/home/fonts/lg.svg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/lg.ttf",
+      "PackagePath": "staticwebassets/home/fonts/lg.ttf"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/lg.woff",
+      "PackagePath": "staticwebassets/home/fonts/lg.woff"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets/home/fonts/materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/materialdesignicons-webfont.svg",
+      "PackagePath": "staticwebassets/home/fonts/materialdesignicons-webfont.svg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets/home/fonts/materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets/home/fonts/materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/fonts/materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets/home/fonts/materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/_blank.png",
+      "PackagePath": "staticwebassets/home/images/_blank.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/about-us-1-720x459.jpg",
+      "PackagePath": "staticwebassets/home/images/about-us-1-720x459.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/about-us-2-420x280.jpg",
+      "PackagePath": "staticwebassets/home/images/about-us-2-420x280.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/about-us-3-420x280.jpg",
+      "PackagePath": "staticwebassets/home/images/about-us-3-420x280.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/about-us-4-420x280.jpg",
+      "PackagePath": "staticwebassets/home/images/about-us-4-420x280.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/ajax-loader.gif",
+      "PackagePath": "staticwebassets/home/images/ajax-loader.gif"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/banner/background-03-1920x310.jpg",
+      "PackagePath": "staticwebassets/home/images/banner/background-03-1920x310.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/banner/background-03-3840x620.jpg",
+      "PackagePath": "staticwebassets/home/images/banner/background-03-3840x620.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/banner/background-04-1920x60.jpg",
+      "PackagePath": "staticwebassets/home/images/banner/background-04-1920x60.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/banner/background-04-3840x120.jpg",
+      "PackagePath": "staticwebassets/home/images/banner/background-04-3840x120.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/banner/foreground-03-1600x310.png",
+      "PackagePath": "staticwebassets/home/images/banner/foreground-03-1600x310.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/banner/foreground-03-3200x620.png",
+      "PackagePath": "staticwebassets/home/images/banner/foreground-03-3200x620.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/banner/foreground-04-1600x60.png",
+      "PackagePath": "staticwebassets/home/images/banner/foreground-04-1600x60.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/banner/foreground-04-3200x120.png",
+      "PackagePath": "staticwebassets/home/images/banner/foreground-04-3200x120.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/blick-01.png",
+      "PackagePath": "staticwebassets/home/images/blick-01.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/breadcrumbs-bg.jpg",
+      "PackagePath": "staticwebassets/home/images/breadcrumbs-bg.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/breadcrumbs-decorate.png",
+      "PackagePath": "staticwebassets/home/images/breadcrumbs-decorate.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/breadcrumbs.svg",
+      "PackagePath": "staticwebassets/home/images/breadcrumbs.svg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/divider-decorate.png",
+      "PackagePath": "staticwebassets/home/images/divider-decorate.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/favicon.ico",
+      "PackagePath": "staticwebassets/home/images/favicon.ico"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/gmap_marker.png",
+      "PackagePath": "staticwebassets/home/images/gmap_marker.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/gmap_marker_active.png",
+      "PackagePath": "staticwebassets/home/images/gmap_marker_active.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/handle.png",
+      "PackagePath": "staticwebassets/home/images/handle.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/ie8-panel/warning_bar_0000_us.jpg",
+      "PackagePath": "staticwebassets/home/images/ie8-panel/warning_bar_0000_us.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/isotope-loader.png",
+      "PackagePath": "staticwebassets/home/images/isotope-loader.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/landing-private-airlines-01-570x370.jpg",
+      "PackagePath": "staticwebassets/home/images/landing-private-airlines-01-570x370.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/landing-private-airlines-02-570x370.jpg",
+      "PackagePath": "staticwebassets/home/images/landing-private-airlines-02-570x370.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/landing-private-airlines-03-570x370.jpg",
+      "PackagePath": "staticwebassets/home/images/landing-private-airlines-03-570x370.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/landing-private-airlines-04-570x370.jpg",
+      "PackagePath": "staticwebassets/home/images/landing-private-airlines-04-570x370.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/landing-private-airlines-05-570x370.jpg",
+      "PackagePath": "staticwebassets/home/images/landing-private-airlines-05-570x370.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/landing-private-airlines-06-570x370.jpg",
+      "PackagePath": "staticwebassets/home/images/landing-private-airlines-06-570x370.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/landing-private-airlines-7-570x415.jpg",
+      "PackagePath": "staticwebassets/home/images/landing-private-airlines-7-570x415.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/landing-private-airlines-8-570x415.jpg",
+      "PackagePath": "staticwebassets/home/images/landing-private-airlines-8-570x415.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/landing-private-airlines-9-570x415.jpg",
+      "PackagePath": "staticwebassets/home/images/landing-private-airlines-9-570x415.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/loading.gif",
+      "PackagePath": "staticwebassets/home/images/loading.gif"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/logo-default-208x46.png",
+      "PackagePath": "staticwebassets/home/images/logo-default-208x46.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/logo-inverse-208x46.png",
+      "PackagePath": "staticwebassets/home/images/logo-inverse-208x46.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/preloader.gif",
+      "PackagePath": "staticwebassets/home/images/preloader.gif"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/preloader.png",
+      "PackagePath": "staticwebassets/home/images/preloader.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-1-1200x800-original.jpg",
+      "PackagePath": "staticwebassets/home/images/project-1-1200x800-original.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-1-570x380.jpg",
+      "PackagePath": "staticwebassets/home/images/project-1-570x380.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-2-1200x800-original.jpg",
+      "PackagePath": "staticwebassets/home/images/project-2-1200x800-original.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-2-570x380.jpg",
+      "PackagePath": "staticwebassets/home/images/project-2-570x380.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-3-1200x800-original.jpg",
+      "PackagePath": "staticwebassets/home/images/project-3-1200x800-original.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-3-570x380.jpg",
+      "PackagePath": "staticwebassets/home/images/project-3-570x380.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-4-1200x800-original.jpg",
+      "PackagePath": "staticwebassets/home/images/project-4-1200x800-original.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-4-570x380.jpg",
+      "PackagePath": "staticwebassets/home/images/project-4-570x380.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-5-1200x800-original.jpg",
+      "PackagePath": "staticwebassets/home/images/project-5-1200x800-original.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-5-570x380.jpg",
+      "PackagePath": "staticwebassets/home/images/project-5-570x380.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-6-1200x800-original.jpg",
+      "PackagePath": "staticwebassets/home/images/project-6-1200x800-original.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/project-6-570x380.jpg",
+      "PackagePath": "staticwebassets/home/images/project-6-570x380.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/quote-user-1-210x210.jpg",
+      "PackagePath": "staticwebassets/home/images/quote-user-1-210x210.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/quote-user-2-210x210.jpg",
+      "PackagePath": "staticwebassets/home/images/quote-user-2-210x210.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/quote-user-3-210x210.jpg",
+      "PackagePath": "staticwebassets/home/images/quote-user-3-210x210.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/swiper-slide-1.jpg",
+      "PackagePath": "staticwebassets/home/images/swiper-slide-1.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/swiper-slide-2.jpg",
+      "PackagePath": "staticwebassets/home/images/swiper-slide-2.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/swiper-slide-3.jpg",
+      "PackagePath": "staticwebassets/home/images/swiper-slide-3.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/team-07-300x300.jpg",
+      "PackagePath": "staticwebassets/home/images/team-07-300x300.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/team-08-300x300.jpg",
+      "PackagePath": "staticwebassets/home/images/team-08-300x300.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/team-09-300x300.jpg",
+      "PackagePath": "staticwebassets/home/images/team-09-300x300.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/team-10-300x300.jpg",
+      "PackagePath": "staticwebassets/home/images/team-10-300x300.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/team-11-380x380.jpg",
+      "PackagePath": "staticwebassets/home/images/team-11-380x380.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/team-12-300x300.jpg",
+      "PackagePath": "staticwebassets/home/images/team-12-300x300.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/team-13-300x300.jpg",
+      "PackagePath": "staticwebassets/home/images/team-13-300x300.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/team-14-300x300.jpg",
+      "PackagePath": "staticwebassets/home/images/team-14-300x300.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/team-15-300x300.jpg",
+      "PackagePath": "staticwebassets/home/images/team-15-300x300.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/typography-1-770x480.jpg",
+      "PackagePath": "staticwebassets/home/images/typography-1-770x480.jpg"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/video-play.png",
+      "PackagePath": "staticwebassets/home/images/video-play.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/vimeo-play.png",
+      "PackagePath": "staticwebassets/home/images/vimeo-play.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/volume.png",
+      "PackagePath": "staticwebassets/home/images/volume.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/images/youtube-play.png",
+      "PackagePath": "staticwebassets/home/images/youtube-play.png"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/js/core.min.js",
+      "PackagePath": "staticwebassets/home/js/core.min.js"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/js/html5shiv.min.js",
+      "PackagePath": "staticwebassets/home/js/html5shiv.min.js"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/js/pointer-events.min.js",
+      "PackagePath": "staticwebassets/home/js/pointer-events.min.js"
+    },
+    {
+      "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/home/js/script.js",
+      "PackagePath": "staticwebassets/home/js/script.js"
+    },
+    {
       "Id": "/Users/yunusemre/Desktop/web/BusTicket/BusTicket/wwwroot/img/testimonial-1.jpg",
       "PackagePath": "staticwebassets/img/testimonial-1.jpg"
     },
